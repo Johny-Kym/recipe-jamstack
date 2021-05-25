@@ -10,13 +10,14 @@ export default function Recipe({ recipe }) {
       <div className="">
         {/* Image thumb */}
         <Image
+        className="rounded"
           src={`https:${thumbnail.fields.file.url}`}
-          width={thumbnail.fields.file.details.image.width}
-          height={thumbnail.fields.file.details.image.height}
+          width="1000"
+          height="700"
         />
       </div>
       {/* content */}
-      <div className="bg-yellow-400 shadow-lg relative -top-10 -left-2 z-10 ">
+      <div className="bg-yellow-400 shadow-lg relative -top-10 -left-2 z-10 rounded ">
         {/* info */}
 
         <div className="info p-2 bg-black w-max text-white">
@@ -26,7 +27,7 @@ export default function Recipe({ recipe }) {
         {/* CTA buttons*/}
         <div className="mt-10 flex justify-end actions">
           <Link  href={`recipes/${slug}`} >
-              <button style={{background:"#2460FB"}} className=" hover:bg-blue-700  py-2 px-4 text-white">
+              <button style={{background:"#2460FB"}} className=" hover:text-black  py-2 px-4 text-white">
                   Cook now
               </button>
           </Link>

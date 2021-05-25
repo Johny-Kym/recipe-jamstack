@@ -57,7 +57,7 @@ export default function RecipeDetails({ recipe }) {
           <Image
             src={`https:${featuredImage.fields.file.url}`}
             width={featuredImage.fields.file.details.image.width}
-            height="2000"
+            height="800"
           />
           <h1 className="bg-white shadow-lg py-3 w-max font-black text-xl uppercase relative -top-10 -left-1 transform -rotate-1">
             {title}
