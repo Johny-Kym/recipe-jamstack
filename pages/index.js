@@ -27,10 +27,10 @@ export default function Home({ recipes }) {
   return (
     <>
       <Header />
-      <div className="px-4  md:px-10 lg:px-36">
+      <div className="px-4  font-myFont md:px-10 lg:px-36">
         <h1 className="text-black text-center text-4xl mt-24">Recipes</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
           {recipes.map((recipe) => (
             <Recipe key={recipe.sys.id} recipe={recipe} />
           ))}

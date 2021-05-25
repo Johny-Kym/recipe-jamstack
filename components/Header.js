@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header className="flex fixed top-0 left-0 w-screen  z-10 bg-black shadow-lg py-4 justify-between items-center px-2 md:px-10 lg:px-36">
+    <header className="flex fixed top-0 left-0 w-screen font-myFont  z-10 bg-black shadow-lg py-4 justify-between items-center px-2 md:px-10 lg:px-36">
       <Link className="cursor-pointer" href="/">
         <a className="text-white font-black">Logo</a>
       </Link>
