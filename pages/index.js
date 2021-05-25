@@ -4,41 +4,38 @@ import { createClient } from "contentful";
 import Header from "../components/Header";
 import Recipe from "../components/Recipe";
 
-export const getStaticProps = async() => {
+export const getStaticProps = async () => {
   const client = createClient({
     space: "wumj2bwqym59",
     accessToken: "_AlJxd9xY27-EiTGd6cn33JFmHxfbrq4txlq2fXUcIM",
   });
 
   const res = await client.getEntries({
-    content_type:"recipe"
-  })
+    content_type: "recipe",
+  });
 
-  return{
-    props:{
-      recipes:res.items,
-      revalidate:1
-    }
-  }
+  return {
+    props: {
+      recipes: res.items,
+    },
+    revalidate: 1,
+  };
 };
 
-export default function Home({recipes}) {
-  console.log(recipes)
+export default function Home({ recipes }) {
+  console.log(recipes);
   return (
     <>
-    <Header />
-    <div className="px-2 md:px-10 lg:px-36">
-     
-      <h1 className="text-black text-center text-4xl mt-5">Recipes</h1>
+      <Header />
+      <div className="px-2 md:px-10 lg:px-36">
+        <h1 className="text-black text-center text-4xl mt-5">Recipes</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-10" >
-        {
-          recipes.map(recipe=>(
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-10">
+          {recipes.map((recipe) => (
             <Recipe key={recipe.sys.id} recipe={recipe} />
-          ))
-        }
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 }
