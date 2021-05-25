@@ -27,8 +27,8 @@ export default function Home({ recipes }) {
   return (
     <>
       <Header />
-      <div className="px-2 md:px-10 lg:px-36">
-        <h1 className="text-black text-center text-4xl mt-5">Recipes</h1>
+      <div className="px-2  md:px-10 lg:px-36">
+        <h1 className="text-black text-center text-4xl mt-24">Recipes</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-10">
           {recipes.map((recipe) => (
