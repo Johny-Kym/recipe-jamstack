@@ -19,14 +19,14 @@ export default function Recipe({ recipe }) {
       <div className="bg-yellow-400 shadow-lg relative -top-10 -left-2 z-10 ">
         {/* info */}
 
-        <div className="info p-4">
+        <div className="info p-2 bg-black w-max text-white">
           <h1 className="text-xl uppercase">{title}</h1>
-          <p className="font-thin">Takes approx {cookingTime} minutes</p>
+          <p className="text-gray-400">Takes approx {cookingTime} minutes</p>
         </div>
         {/* CTA buttons*/}
         <div className="mt-10 flex justify-end actions">
           <Link  href={`recipes/${slug}`} >
-              <button style={{background:"#2460FB"}} className="  py-2 px-4 text-white">
+              <button style={{background:"#2460FB"}} className=" hover:bg-blue-700  py-2 px-4 text-white">
                   Cook now
               </button>
           </Link>

@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
   });
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 export const getStaticProps = async ({ params }) => {
@@ -32,12 +32,16 @@ export const getStaticProps = async ({ params }) => {
     props: {
       recipe: items[0],
     },
+    revalidate:1
   };
 };
 
 export default function RecipeDetails({ recipe }) {
+  if(!recipe) <div>Loading...</div>
   const { featuredImage, title, cookingTime, ingredients, method } =
     recipe.fields;
+
+
   return (
       <>
       <Header/>
