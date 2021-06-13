@@ -70,7 +70,7 @@ export default function RecipeDetails({ recipe }) {
           <span className="font-bold text-black -mt-2"> {cookingTime}</span>{" "}
           mins
         </p>
-        <h3 className=" font-black text-xl mb-1">Ingredients</h3>
+        <h3 className="  shit  ">Ingredients</h3>
 
         <ol className="mb-4">
           {ingredients.map((ing) => (
@@ -79,7 +79,7 @@ export default function RecipeDetails({ recipe }) {
         </ol>
 
         <div className="">
-          <h1 className="uppercase font-black text-xl mb-2">Method</h1>
+          <h1 className="uppercase   shit ">Method</h1>
           <div>{documentToReactComponents(method)}</div>
         </div>
       </div>
