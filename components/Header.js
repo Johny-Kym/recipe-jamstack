@@ -9,9 +9,8 @@ function Header() {
     setPath(window.location.pathname);
   }, []);
 
-  console.log(path);
   return (
-    <header className="flex fixed top-0 left-0 w-screen font-myFont  z-10 bg-black shadow-lg h-20 md:h-14 justify-between items-center px-2 md:px-10 lg:px-36">
+    <header className="flex fixed top-0 left-0 w-screen font-myFont  z-10 bg-black shadow-lg h-16 justify-between items-center px-2 md:px-10 lg:px-36">
       <Link className="cursor-pointer" href="/">
         <Image
           className="cursor-pointer"
