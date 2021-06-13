@@ -16,7 +16,7 @@ function Header() {
         <Image
           className="cursor-pointer"
           src="/recipe-logo.png"
-          width="40px"
+          width="80px"
           height="40px"
         />
       </Link>
