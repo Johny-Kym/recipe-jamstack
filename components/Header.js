@@ -19,7 +19,7 @@ function Header() {
           height="40px"
         />
       </Link>
-      <ul className="flex  w-36 justify-between  uppercase text-sm items-center">
+      <ul className="flex   justify-between  uppercase text-sm items-center">
         <Link href="/ " className="cursor-pointer">
           <a
             className={
@@ -31,7 +31,7 @@ function Header() {
             Home
           </a>
         </Link>
-        <Link href="/about">
+        {/* <Link href="/about">
           <a
             className={
               path === "/about"
@@ -41,7 +41,7 @@ function Header() {
           >
             About
           </a>
-        </Link>
+        </Link> */}
       </ul>
     </header>
   );
