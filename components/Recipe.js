@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import TrendingFlatIcon from "@material-ui/icons/TrendingFlat";
-import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import AccessTimeIcon from "@material-ui/icons/AccessTime";
 
 export default function Recipe({ recipe }) {
   const { title, slug, cookingTime, thumbnail } = recipe.fields;
@@ -25,7 +25,14 @@ export default function Recipe({ recipe }) {
         <div className="info p-2 bg-black w-max text-white">
           <h1 className="text-xl uppercase">{title}</h1>
           <div className="flex justify-start items-center">
-            <AccessTimeIcon style={{width:"1.2rem", height:"1.2rem",color:"#9CA3AF",marginRight:"0.4rem"}}/>
+            <AccessTimeIcon
+              style={{
+                width: "1.2rem",
+                height: "1.2rem",
+                color: "#9CA3AF",
+                marginRight: "0.4rem",
+              }}
+            />
             <p className="text-gray-400">{cookingTime} minutes</p>
           </div>
         </div>

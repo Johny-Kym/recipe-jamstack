@@ -27,13 +27,13 @@ export const getStaticProps = async ({ params }) => {
     content_type: "recipe",
     "fields.slug": params.slug,
   });
-  if(!items.length){
-    return{
-      redirect:{
-        destination:"/",
-        permanent:'false'
-      }
-    }
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: "false",
+      },
+    };
   }
   return {
     props: {
@@ -47,17 +47,18 @@ export default function RecipeDetails({ recipe }) {
   if (!recipe) return <div>Loading...</div>;
   const { featuredImage, title, cookingTime, ingredients, method } =
     recipe.fields;
+  console.log(recipe);
 
   return (
     <>
       <Header />
-      <div className="px-2 md:px-10 lg:px-36 ">
+      <div className="px-2 font-myFont md:px-10 lg:px-36 py-10 ">
         {/*Banner */}
         <div className="mt-10">
           <Image
-            src={`https:${featuredImage.fields.file.url}`}
+            src={`https:${featuredImage?.fields?.file?.url}`}
             width={featuredImage.fields.file.details.image.width}
-            height="800"
+            height={featuredImage.fields.file.details.image.height}
           />
           <h1 className="bg-white shadow-lg py-3 w-max font-black text-xl uppercase relative -top-10 -left-1 transform -rotate-1">
             {title}

@@ -23,12 +23,12 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ recipes }) {
-  console.log(recipes);
+  console.log(recipes.fields);
   return (
     <>
       <Header />
       <div className="px-4  font-myFont md:px-10 lg:px-36">
-        <h1 className="text-black text-center text-4xl mt-24">Recipes</h1>
+        <h1 className="text-black text-center text-4xl mt-20">Recipes</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
           {recipes.map((recipe) => (
