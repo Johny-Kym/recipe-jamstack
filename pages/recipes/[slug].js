@@ -60,13 +60,17 @@ export default function RecipeDetails({ recipe }) {
             width={featuredImage.fields.file.details.image.width}
             height={featuredImage.fields.file.details.image.height}
           />
-          <h1 className="bg-white shadow-lg py-3 w-max font-black text-xl uppercase relative -top-10 -left-1 transform -rotate-1">
+          <h1 className="bg-yellow-400 px-1 shadow-lg py-3 w-max font-black text-xl uppercase relative -top-10 -left-1 transform -rotate-1">
             {title}
           </h1>
         </div>
         {/*info */}
-        <p className="mt-0 mb-2">Take about {cookingTime} mins</p>
-        <h3 className=" font-black text-xl">Ingredients</h3>
+        <p className="mt-0 mb-2">
+          Takes about{" "}
+          <span className="font-bold text-black -mt-2"> {cookingTime}</span>{" "}
+          mins
+        </p>
+        <h3 className=" font-black text-xl mb-1">Ingredients</h3>
 
         <ol className="mb-4">
           {ingredients.map((ing) => (
@@ -75,7 +79,7 @@ export default function RecipeDetails({ recipe }) {
         </ol>
 
         <div className="">
-          <h1 className="uppercase font-black text-xl ">Method</h1>
+          <h1 className="uppercase font-black text-xl mb-2">Method</h1>
           <div>{documentToReactComponents(method)}</div>
         </div>
       </div>
